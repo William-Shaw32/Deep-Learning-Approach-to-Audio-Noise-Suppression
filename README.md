@@ -26,7 +26,7 @@ The main model is a four-stage U-Net with skip connections, operating on single-
 
 It was found that less than 0.4 dB separates the three models, which suggests the encoder-decoder structure is doing the majority of the work. Skip connections still contributed, but by less than the literature suggested.
 
-## Running it
+## Running the Notebook
 
 Requirements:
 
