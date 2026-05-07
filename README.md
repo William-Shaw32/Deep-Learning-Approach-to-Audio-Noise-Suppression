@@ -6,11 +6,16 @@ On the full 824-file test set, the final model improves SI-SDR by 9.466 dB over 
 
 ## How it works
 
+<img width="944" height="265" alt="image" src="https://github.com/user-attachments/assets/63b17062-e150-405e-8440-d97fce7f553f" />
+
 A noisy waveform is converted to a complex spectrogram via STFT. The magnitude is log-compressed and passed to a U-Net, which outputs a mask the same shape as the spectrogram with values between 0 and 1. The mask is multiplied elementwise with the noisy magnitude, recombined with the original noisy phase, and inverse-STFT'd back to a waveform. The network is trained with MSE between the predicted and clean magnitudes.
 
 ## Architecture
 
 The main model is a four-stage U-Net with skip connections, operating on single-channel magnitude spectrograms. Two variants were trained for comparison: a no-skip version of the same depth, and a shallow version with two stages instead of four. Each was trained for 35 epochs with a learning rate selected from a short sweep over 1e-3, 1e-4, and 1e-5.
+
+<img width="532" height="314" alt="image" src="https://github.com/user-attachments/assets/1fcfab6f-fef0-4b89-9958-333fcc7632c6" />
+
 
 | Model          | SI-SDR Improvement |
 | -------------- | ------------------ |
