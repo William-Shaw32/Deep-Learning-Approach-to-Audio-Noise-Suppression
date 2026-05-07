@@ -16,6 +16,7 @@ The main model is a four-stage U-Net with skip connections, operating on single-
 
 <img width="532" height="314" alt="image" src="https://github.com/user-attachments/assets/1fcfab6f-fef0-4b89-9958-333fcc7632c6" />
 
+<br>
 
 | Model          | SI-SDR Improvement |
 | -------------- | ------------------ |
